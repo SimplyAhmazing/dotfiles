@@ -16,19 +16,29 @@ alias glt="git log --graph --decorate --pretty=oneline --abbrev-commit"
 alias gco="git checkout"
 alias gcb="git checkout -b"
 alias gtb="git branch"
-alias gcm="git commit"
+alias gts="git status"
+alias gcm="git commit -am"
+
+alias gpl="git pull"
+alias gplom="git pull origin master"
+alias gp="git push"
+alias gpo="git push origin"
+alias gpom="git push origin master"
+alias gphm="git push heroku master"
 
 
 # hg Alias's
+alias hgd="hg diff"
 alias hgs="hg status"
-
-alias hgb="hg branch"
-alias hgbs="hg branches"
+alias hpu="hg pull -u"
+alias hgb="hg branches"
 alias hgl="hg log --template '{node|short} | {date|isodatesec} | {author|user}: {desc|strip|firstline}\\n' | less"
 alias hgll="hg log -G -l9 | less"
 
 alias hgco="hg checkout"
-alias hgcm="hg commit"
+alias hgcm="hg commit -m"
+alias hgtheirs="hg resolve -t internal:other"
+alias hgmines="hg resolve -t internal:local"
 
 
 # TMUX Alias's
@@ -37,5 +47,3 @@ alias tcn="tmux attach -t"
 
 # call .profile file
 . ~/.profile
-
-

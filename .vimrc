@@ -9,10 +9,15 @@ set softtabstop=4
 set autoindent
 set smarttab
 set expandtab " Allows tab to be equivalent to 4 spaces
+set mouse=a
 
 filetype indent on
 filetype on
 filetype plugin on
+
+" For code folding
+set foldmethod=manual
+set foldlevel=99
 
 " Settings for molokai color scheme
 " set t_Co=256
@@ -76,3 +81,11 @@ endif
 
 map ,c :s/^/# /<CR>
 map ,u :s/^# //<CR>
+
+" Sparkup configs
+let g:sparkup = 'sparkup'
+let g:sparkupArgs = '--no-last-newline'
+"let g:sparkupExecuteMapping = ''
+"let g:sparkupNextMapping = ''
+
+
