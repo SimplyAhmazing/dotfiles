@@ -44,6 +44,3 @@ alias hgmines="hg resolve -t internal:local"
 # TMUX Alias's
 alias tns="tmux new-session -s"
 alias tcn="tmux attach -t"
-
-# call .profile file
-. ~/.profile

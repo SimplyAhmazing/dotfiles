@@ -1,4 +1,4 @@
-execute pathogen#infect()
+execute pathogen#infect('bundle/{}', '~/Code/dotfiles/.vim/bundle/{}')
 
 syntax on
 

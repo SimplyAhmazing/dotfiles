@@ -48,7 +48,6 @@ source ~/.secret_aliases
 # Bash history size limit increase
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
-shopt -s histappend
 
 export TMP_ROOT=$HOME/Projects/data/backends/
 

@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="jwm"
+ZSH_THEME="aa"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -83,11 +83,9 @@ source $ZSH/oh-my-zsh.sh
 #
 # # alias pip="echo 'Use p to install and pc to cache' ; pip \!*"
 alias s="python -m SimpleHTTPServer"
+alias ss="python -m http.server"  # For python 3
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
-
-# Boxen bootstrap
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 # Customize ls
 alias ls="ls -G"
@@ -127,9 +125,8 @@ export GREP_OPTIONS='--color=auto'
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 # cd with history, http://linuxgazette.net/109/marinov.html
-source ~/bash/acd_func.sh
 source ~/.bashrc
-source ~/.secret_aliases
+# source ~/.bash_profile
 
 [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
 
@@ -161,8 +158,11 @@ function get_project() {
 export PROMPT_COMMAND='set_title `get_project`'
 
 # Docker settings
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/ahmed/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+# export DOCKER_HOST=tcp://192.168.59.103:2376
+# export DOCKER_CERT_PATH=/Users/ahmed/.boot2docker/certs/boot2docker-vm
+# export DOCKER_TLS_VERIFY=1
 
 alias mde="open -a /Applications/Mou.app"
+
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
